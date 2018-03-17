@@ -14,3 +14,16 @@
   69 / 99 + 68 = 68  
   95 - 84 + 60 = 71  
   76 * 13 + 9 = 997
+  
+## 组织结构
+```
+Arithmetic(SE)
+|--app
+|   |--Arithmetic
+|--util
+|   |--CalculateUtil
+|   |--Const
+|   |--FileUtil
+|   |--RandomUtil
+|--Application
+```
