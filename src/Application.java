@@ -17,7 +17,7 @@ public class Application {
 
         FileUtil.writeToFile("201571030107\n");
 
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < Integer.parseInt(args[0]); i++){
             if (Arithmetic.generate()){
                 System.out.println("SUCCESS");
             }
