@@ -26,14 +26,20 @@ public class Arithmetic {
             firstOperator = OPERATOR[RandomUtil.generateRandomNum(0, 3)];
             secondOperator = OPERATOR[RandomUtil.generateRandomNum(0, 3)];
 
-            // compute
-            if (secondOperator.equals("*") || secondOperator.equals("/")) {
-                int prepResult = CalculateUtil.compute(secondNum, thirdNum, secondOperator);
-                result = CalculateUtil.compute(firstNum, prepResult, firstOperator);
-            } else {
-                int prepResult = CalculateUtil.compute(firstNum, secondNum, firstOperator);
-                result = CalculateUtil.compute(prepResult, thirdNum, secondOperator);
+            try {
+                // compute
+                if (secondOperator.equals("*") || secondOperator.equals("/")) {
+                    int prepResult = CalculateUtil.compute(secondNum, thirdNum, secondOperator);
+                    result = CalculateUtil.compute(firstNum, prepResult, firstOperator);
+                } else {
+                    int prepResult = CalculateUtil.compute(firstNum, secondNum, firstOperator);
+                    result = CalculateUtil.compute(prepResult, thirdNum, secondOperator);
+                }
+            } catch (Exception e){
+                e.printStackTrace();
+                continue;
             }
+
 
             // judge result
             if (result > 0) {
