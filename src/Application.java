@@ -11,14 +11,14 @@ public class Application {
     public static void main(String[] args) {
 
         File file = new File("result.txt");
-        if (file.exists()){
+        if (file.exists()) {
             file.delete();
         }
 
         FileUtil.writeToFile("201571030107\n");
 
-        for (int i = 0; i < Integer.parseInt(args[0]); i++){
-            if (Arithmetic.generate()){
+        for (int i = 0; i < Integer.parseInt(args[0]); i++) {
+            if (Arithmetic.generate()) {
                 System.out.println("SUCCESS");
             }
         }

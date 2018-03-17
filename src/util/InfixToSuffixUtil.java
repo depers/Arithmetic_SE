@@ -10,7 +10,11 @@ import java.util.Stack;
 public class InfixToSuffixUtil {
 
     public static void main(String[] args) {
-        // System.out.println(prefixToSuffix("(,30,*,(,11,-,25,),),/,11"));
+        try {
+            System.out.println(prefixToSuffix("89,-,(,44,/,(,56,*,33,),)"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private static Stack<String> stack = new Stack<String>();

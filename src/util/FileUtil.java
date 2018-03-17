@@ -14,7 +14,7 @@ public class FileUtil {
         System.out.println(writeToFile("hello"));
     }
 
-    public static boolean writeToFile(String result){
+    public static boolean writeToFile(String result) {
 
         try {
             FileWriter writer = new FileWriter("result.txt", true);

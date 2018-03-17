@@ -10,8 +10,11 @@ import java.util.regex.Pattern;
 public class SuffixToValueUtil {
 
     public static void main(String[] args) {
-        //System.out.println(compute("30 11 25 - * 11 /"));
-        System.out.println(isNum("12"));
+        try {
+            System.out.println(compute("89 44 56 33 * / -"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private static Pattern pattern = Pattern.compile("\\d+\\.?\\d?");

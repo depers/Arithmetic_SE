@@ -5,7 +5,7 @@ package util;
  */
 public class Const {
 
-    public interface Operator{
+    public interface Operator {
 
         String add = "+";
         String division = "/";

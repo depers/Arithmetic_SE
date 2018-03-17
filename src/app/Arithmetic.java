@@ -29,9 +29,9 @@ public class Arithmetic {
                     firstNum, secondNum, thirdNum, forthNum);
 
             // Convert the infix expression to a suffix expression, then calculate
-            try{
+            try {
                 result = SuffixToValueUtil.compute(InfixToSuffixUtil.prefixToSuffix(infixExpression));
-            } catch (Exception e){
+            } catch (Exception e) {
                 // e.printStackTrace();
                 continue;
             }
@@ -40,7 +40,7 @@ public class Arithmetic {
             if (result > 0) {
                 StringBuffer buffer = new StringBuffer();
                 String[] str = infixExpression.split(",");
-                for (int i = 0; i < str.length; i++){
+                for (int i = 0; i < str.length; i++) {
                     buffer.append(str[i]);
                 }
                 buffer.append(" = ").append(result).append("\n");
