@@ -24,6 +24,11 @@ public class Arithmetic {
             secondOperator = OPERATOR[RandomUtil.generateRandomNum(0, 3)];
             thirdOperator = OPERATOR[RandomUtil.generateRandomNum(0, 3)];
 
+            // The operation contains more than two operators
+            if (firstOperator.equals(secondOperator) && firstOperator.equals(thirdOperator)){
+                continue;
+            }
+
             // Add brackets
             String infixExpression = BracketsCompute.compute(firstOperator, secondOperator, thirdOperator,
                     firstNum, secondNum, thirdNum, forthNum);

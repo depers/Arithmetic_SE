@@ -43,8 +43,16 @@ public class SuffixToValueUtil {
                 numOne = Integer.parseInt(stack.pop());
                 temp = CalculateUtil.compute(numOne, numTwo, express[i]).toString();
 
+                // Divide by 0
                 if (Integer.parseInt(temp) < 0){
                     throw new Exception("Negative numbers in operation");
+                }
+
+                // Decimal processing
+                if(express[i].equals(Const.Operator.division)){
+                    if (numOne % numTwo != 0){
+                        throw new Exception("Counts appear in operations");
+                    }
                 }
                 stack.push(temp);
             }
